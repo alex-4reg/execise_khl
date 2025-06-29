@@ -26,7 +26,7 @@ def main():
           f"{execution_time2:.5f} sec).")
 
 
-def get_sum_of_multiples(number: int, *dividers):
+def get_sum_of_multiples(number, *dividers):
     if number < 0:
         return 0
 
@@ -37,11 +37,11 @@ def get_sum_of_multiples(number: int, *dividers):
     return sum(set(sum_of_multiples))
 
 
-def fill_list_of_divisible_numbers(number: int, divider):
+def fill_list_of_divisible_numbers(number, divider):
     return list(range(divider, number - get_remainder(number, divider) + 1, divider))
 
 
-def get_remainder(number: int, divider: int):
+def get_remainder(number, divider):
     return (number - 1) % divider
 
 
